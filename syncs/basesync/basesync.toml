@@ -1,0 +1,15 @@
+[[resource_sync]]
+name = "secrets"
+[resource_sync.config]
+files_on_host = true
+resource_path = ["secrets.toml"]
+
+##
+
+[[resource_sync]]
+name = "stacks"
+description = "Sets all stacks from Git"
+[resource_sync.config]
+repo = "ClementPhan/komodo-stacks"
+git_account = "ClementPhan"
+resource_path = ["syncs"]

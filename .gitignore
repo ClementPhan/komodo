@@ -1,0 +1,4 @@
+# Periphery files
+periphery/*
+syncs/secrets/secrets.toml
+compose.env
