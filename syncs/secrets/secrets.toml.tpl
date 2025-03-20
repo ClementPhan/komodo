@@ -4,6 +4,11 @@ name = "EMAIL"
 description = "Personal email adress"
 value = "op://Docker Secrets/email/email/email"
 
+[[variable]]
+name = "BASE_URL"
+description = "Home URL"
+value = "op://Docker Secrets/home_address/url/url"
+
 
 # Paperless
 [[variable]]
