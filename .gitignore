@@ -2,3 +2,4 @@
 periphery/*
 syncs/secrets/secrets.toml
 compose.env
+.env

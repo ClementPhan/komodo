@@ -1,3 +1,7 @@
+# Genral config
+BASE_URL={{op://Docker Secrets/home_address/url/url}}
+
+
 ####################################
 # 🦎 KOMODO COMPOSE - VARIABLES 🦎 #
 ####################################

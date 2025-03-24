@@ -45,7 +45,7 @@ services:
       traefik_proxy: {}
     ports:
       - 9120:9120
-    env_file: ./compose.env
+    env_file: .env
     environment:
       KOMODO_DATABASE_ADDRESS: mongo:27017
       KOMODO_DATABASE_USERNAME: ${KOMODO_DB_USERNAME}
@@ -75,7 +75,7 @@ services:
       driver: ${COMPOSE_LOGGING_DRIVER:-local}
     networks:
       - default
-    env_file: ./compose.env
+    env_file: .env
     environment:
       PERIPHERY_REPO_DIR: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}/repos
       PERIPHERY_STACK_DIR: ${PERIPHERY_ROOT_DIRECTORY:-/etc/komodo}/stacks
