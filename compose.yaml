@@ -30,6 +30,11 @@ services:
     image: ghcr.io/mbecker20/komodo:${COMPOSE_KOMODO_IMAGE_TAG:-latest}
     labels:
       komodo.skip: null # Prevent Komodo from stopping with StopAllContainers
+      traefik.enable: true
+      traefik.http.routers.komodo.rule: Host(`komodo.$BASE_URL`)
+      traefik.http.routers.komodo.entrypoints: websecure
+      traefik.http.routers.komodo.tls.certresolver: myresolver
+      traefik.http.services.komodo.loadbalancer.server.port: 9120
     restart: unless-stopped
     depends_on:
       - mongo
@@ -37,9 +42,7 @@ services:
       driver: ${COMPOSE_LOGGING_DRIVER:-local}
     networks:
       default: {}
-      swag_bridge:
-        aliases:
-          - komodo
+      traefik_proxy: {}
     ports:
       - 9120:9120
     env_file: ./compose.env
@@ -96,5 +99,6 @@ volumes:
   repo-cache: null
 networks:
   default: {}
-  swag_bridge:
-    external: true
+  traefik_proxy:
+    name: traefik_proxy
+    driver: bridge
