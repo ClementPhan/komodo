@@ -59,3 +59,10 @@ is_secret = true
 name = "PUSHOVER_API_TOKEN"
 value = "op://Docker Secrets/pushover/docker_backup/api_token"
 is_secret = true
+
+
+# Tailscale
+[[variable]]
+name = "TAILSCALE_AUTH_KEY"
+value = "op://Docker Secrets/tailscale/auth_keys/auth_key"
+is_secret = true
