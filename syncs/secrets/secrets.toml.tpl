@@ -47,3 +47,15 @@ is_secret = true
 name = "OVH_CONSUMER_KEY"
 value = "op://Docker Secrets/ovh/secrets/consumer_key"
 is_secret = true
+
+
+# Pushover
+[[variable]]
+name = "PUSHOVER_USER_KEY"
+value = "op://Docker Secrets/pushover/user/user_key"
+is_secret = true
+
+[[variable]]
+name = "PUSHOVER_API_TOKEN"
+value = "op://Docker Secrets/pushover/docker_backup/api_token"
+is_secret = true
