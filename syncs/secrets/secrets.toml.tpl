@@ -66,3 +66,10 @@ is_secret = true
 name = "TAILSCALE_AUTH_KEY"
 value = "op://Docker Secrets/tailscale/auth_keys/auth_key"
 is_secret = true
+
+
+# Immich
+[[variable]]
+name = "IMMICH_DB_PASSWORD"
+value = "op://Docker Secrets/immich/database/password"
+is_secret = true
