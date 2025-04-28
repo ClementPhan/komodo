@@ -43,7 +43,7 @@ KOMODO_TITLE=Komodo
 ## Use `https://host.docker.internal:8120` when using systemd-managed Periphery.
 KOMODO_FIRST_SERVER=https://periphery:8120
 ## Make all buttons just double-click, rather than the full confirmation dialog.
-KOMODO_DISABLE_CONFIRM_DIALOG=false
+KOMODO_DISABLE_CONFIRM_DIALOG=true
 
 ## Rate Komodo polls your servers for
 ## status / container status / system stats / alerting.
