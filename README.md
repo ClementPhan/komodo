@@ -4,27 +4,22 @@
 
 ### Set up 1Password CLI
 
-1. Check if you have 1Password CLI installed by running ```op --version```.
-If it errors, [install 1Password](https://developer.1password.com/docs/cli/get-started/).
-
 1. Get your secret token for a service account with access to the **Docker Secrets**
 vault. If you are part of the family vault, it is contained in the item named :
 **Service Account Auth Token: docker-home**.
 
-1. Login to 1Password CLI by running ```export OP_SERVICE_ACCOUNT_TOKEN=<your-service-account-token>```,
-replacing the placeholder with the token from the previous step.
-
-1. Check 1Password CLI recognizes you by running ```op user get --me```
+1. Check 1Password CLI recognizes you by running ```docker run -i -e OP_SERVICE_ACCOUNT_TOKEN=[YOUR_TOKEN_HERE] 1password/op op user get --me```,
+replacing ```[YOUR_TOKEN_HERE]``` with your token. 
 
 If you have an error, you should [create a service account](https://developer.1password.com/docs/service-accounts/get-started/)
 with the correct permissions.
 
 ### Populate the secrets to the config files
 
-Run ```./get_secrets```. It should create the files:
+Run ```./get_secrets [YOUR_TOKEN_HERE]```. It should create the files:
 
 - syncs/secrets/secrets.toml
-- compose.env
+- .env
 
 ## Launch
 

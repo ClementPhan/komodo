@@ -57,9 +57,9 @@ KOMODO_MONITORING_INTERVAL="15-sec"
 KOMODO_RESOURCE_POLL_INTERVAL="5-min"
 
 ## Used to auth incoming webhooks. Alt: KOMODO_WEBHOOK_SECRET_FILE
-KOMODO_WEBHOOK_SECRET=a_random_secret
+KOMODO_WEBHOOK_SECRET={{op://docker/komodo/authentication/webhook_secret}}
 ## Used to generate jwt. Alt: KOMODO_JWT_SECRET_FILE
-KOMODO_JWT_SECRET=a_random_jwt_secret
+KOMODO_JWT_SECRET={{op://docker/komodo/authentication/jwt_secret}}
 
 ## Enable login with username + password.
 KOMODO_LOCAL_AUTH=true
