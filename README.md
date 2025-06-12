@@ -4,7 +4,7 @@
 
 ### Set up 1Password CLI
 
-1. Get your secret token for a service account with access to the **Docker Secrets**
+1. Get your secret token for a service account with access to the **docker**
 vault. If you are part of the family vault, it is contained in the item named :
 **Service Account Auth Token: docker-home**.
 

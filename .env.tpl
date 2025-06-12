@@ -1,5 +1,5 @@
 # Genral config
-BASE_URL={{op://Docker Secrets/home_address/url/url}}
+BASE_URL={{op://docker/home_address/url/url}}
 
 
 ####################################
@@ -20,10 +20,10 @@ COMPOSE_LOGGING_DRIVER=local # Enable log rotation with the local driver.
 
 ## DB credentials - Ignored for Sqlite
 KOMODO_DB_USERNAME='admin'
-KOMODO_DB_PASSWORD='op://Docker Secrets/komodo/authentication/db_password'
+KOMODO_DB_PASSWORD='op://docker/komodo/authentication/db_password'
 
 ## Configure a secure passkey to authenticate between Core / Periphery.
-KOMODO_PASSKEY='op://Docker Secrets/komodo/authentication/komodo_passkey'
+KOMODO_PASSKEY='op://docker/komodo/authentication/komodo_passkey'
 
 #=-------------------------=#
 #= Komodo Core Environment =#
@@ -36,7 +36,7 @@ KOMODO_PASSKEY='op://Docker Secrets/komodo/authentication/komodo_passkey'
 ## Docs: https://docs.docker.com/compose/how-tos/use-secrets/#examples
 
 ## Used for Oauth / Webhook url suggestion / Caddy reverse proxy.
-KOMODO_HOST=https://komodo.{{op://Docker Secrets/home_address/url/url}}
+KOMODO_HOST=https://komodo.{{op://docker/home_address/url/url}}
 ## Displayed in the browser tab.
 KOMODO_TITLE=Komodo
 ## Create a server matching this address as the "first server".
