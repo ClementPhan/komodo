@@ -13,6 +13,8 @@ BASE_URL={{op://docker/home_address/url/url}}
 
 ## Stick to a specific version, or use `latest`
 COMPOSE_KOMODO_IMAGE_TAG=latest
+## Store dated database backups on the host - https://komo.do/docs/setup/backup
+COMPOSE_KOMODO_BACKUPS_PATH=/etc/komodo/backups
 
 ## Note: 🚨 Podman does NOT support local logging driver 🚨. See Podman options here:
 ## `https://docs.podman.io/en/v4.6.1/markdown/podman-run.1.html#log-driver-driver`
