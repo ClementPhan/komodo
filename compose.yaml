@@ -35,6 +35,12 @@ services:
       traefik.http.routers.komodo.entrypoints: websecure
       traefik.http.routers.komodo.tls.certresolver: myresolver
       traefik.http.services.komodo.loadbalancer.server.port: 9120
+      # Homepage configuration
+      homepage.group: Network
+      homepage.name: Komodo
+      homepage.icon: komodo.svg
+      homepage.href: https://komodo.{{op://docker/home_address/url/url}}/
+      homepage.description: Docker management
     restart: unless-stopped
     depends_on:
       - mongo
